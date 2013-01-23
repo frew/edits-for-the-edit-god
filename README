@@ -1,0 +1,11 @@
+To create data for testing (warning, this takes a long time and requires
+a ~64GB download, and ~200GB of hard drive space):
+
+$ mkdir metadata
+$ cd metadata
+$ wget http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-md5sums.txt
+$ cd ..
+$ ruby md5_to_links.rb
+$ mkdir data
+$ ruby get_data.rb
+$ ./parse_data.sh
